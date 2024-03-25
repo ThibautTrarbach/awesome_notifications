@@ -407,6 +407,8 @@ public class PermissionManager {
                             if permissionsRequested.contains(NotificationPermission.CriticalAlert.rawValue) ||
                                 permissionsRequested.contains(NotificationPermission.OverrideDnD.rawValue){
                                 if(settings.criticalAlertSetting == .notSupported){
+                                    Logger.e(self.TAG, "\(settings.criticalAlertSetting)")
+                                    Logger.e(self.TAG, "\(permissionsRequested)")
                                     Logger.e(self.TAG,
                                         "Critical Alerts are not available for this project. " +
                                         "You must require Apple special permissions to use it. " +
